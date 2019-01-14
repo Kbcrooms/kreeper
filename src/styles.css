@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+.card{
+  display: inline-block;
+  width: 32%;
+  margin: .5%;
+  background-color: #80D39B;
+  color: white;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: .75em;
+  white-space: nowrap;
+
+}
+.card img{
+  width: 85%;
+  margin: 20px auto;
+
+}
+.card h1{
+  font-size: 125%;
+  text-transform: capitalize;
+
+}
+.card table{
+  text-align: left;
+}
+.cardInfo{
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+}

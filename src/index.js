@@ -1,12 +1,31 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import './styles.css';
+import Home from './home.jsx';
+import Women from './women.jsx';
+import Men from './men.jsx';
+import Error from './error.jsx';
+import Navbar from './components/navbar.jsx';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <BrowserRouter>
+          <div>
+            <Navbar/>
+            <Switch>
+              <Route path="/" component={Home} exact/>
+              <Route path="/Women" component={Women}/>
+              <Route path="/Men" component={Men}/>
+              <Route component={Error}/>
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App/>,document.getElementById('root'));
